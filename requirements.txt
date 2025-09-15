@@ -1,0 +1,10 @@
+requests
+beautifulsoup4
+lxml
+paramiko
+colorama
+pyfiglet
+rich
+cryptography
+scapy
+faker

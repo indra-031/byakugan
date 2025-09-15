@@ -1,0 +1,362 @@
+{
+  "meta": {
+    "generated_by": "Byakugan assistant (deep search)",
+    "note": "Best-effort comprehensive CDN database. Some range_urls / ASNs may require verification against provider docs. See sources in README/commit."
+  },
+  "providers": {
+    "cloudflare": {
+      "name": "Cloudflare",
+      "cname_tokens": ["cloudflare"],
+      "header_tokens": ["cf-ray", "cf-cache-status", "server"],
+      "issuer_tokens": ["cloudflare"],
+      "org_tokens": ["cloudflare"],
+      "range_urls": [
+        "https://www.cloudflare.com/ips-v4",
+        "https://www.cloudflare.com/ips-v6"
+      ],
+      "asns": [13335]
+    },
+    "fastly": {
+      "name": "Fastly",
+      "cname_tokens": ["fastly", "fastly.net"],
+      "header_tokens": ["x-served-by", "x-cache", "x-fastly-request-id"],
+      "issuer_tokens": ["fastly"],
+      "org_tokens": ["fastly"],
+      "range_urls": [
+        "https://api.fastly.com/public-ip-list"
+      ],
+      "asns": [54113]
+    },
+    "cloudfront": {
+      "name": "Amazon CloudFront (AWS)",
+      "cname_tokens": ["cloudfront.net"],
+      "header_tokens": ["x-cache", "via"],
+      "issuer_tokens": ["amazon", "amazon.com"],
+      "org_tokens": ["amazon", "aws", "amazon.com"],
+      "range_urls": [
+        "https://ip-ranges.amazonaws.com/ip-ranges.json",
+        "https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips"
+      ],
+      "asns": []
+    },
+    "google": {
+      "name": "Google / Google Cloud",
+      "cname_tokens": ["googleusercontent", "googlehosted", "ghs.googlehosted"],
+      "header_tokens": ["x-goog"],
+      "issuer_tokens": ["google"],
+      "org_tokens": ["google"],
+      "range_urls": [
+        "https://www.gstatic.com/ipranges/goog.json",
+        "https://www.gstatic.com/ipranges/cloud.json"
+      ],
+      "asns": [15169]
+    },
+    "azure": {
+      "name": "Microsoft / Azure CDN",
+      "cname_tokens": ["azureedge.net", "azurefd.net", "vo.msecnd.net"],
+      "header_tokens": ["x-azure-ref"],
+      "issuer_tokens": ["microsoft", "azure"],
+      "org_tokens": ["microsoft", "azure", "microsoft-corp"],
+      "range_urls": [
+        "https://www.microsoft.com/en-us/download/details.aspx?id=56519",
+        "https://download.microsoft.com/download/whichever/azure/public-ip-ranges" 
+      ],
+      "asns": []
+    },
+    "akamai": {
+      "name": "Akamai",
+      "cname_tokens": ["akamai", "akamaiedge", "edgesuite", "akamaitechnologies", "akamaitechnologies.com"],
+      "header_tokens": ["akamai", "akamaitechnologies"],
+      "issuer_tokens": ["akamai"],
+      "org_tokens": ["akamai"],
+      "range_urls": [],
+      "asns": [12222, 63949, 32787]
+    },
+    "imperva": {
+      "name": "Imperva / Incapsula",
+      "cname_tokens": ["incap", "incapsula", "incapdns"],
+      "header_tokens": ["x-incapsula", "incapsula"],
+      "issuer_tokens": ["imperva", "incapsula"],
+      "org_tokens": ["imperva", "incapsula"],
+      "range_urls": [
+        "https://docs.imperva.com/howto/c85245b7"
+      ],
+      "asns": [19551]
+    },
+    "stackpath": {
+      "name": "StackPath (Highwinds)",
+      "cname_tokens": ["stackpath", "stackpathcdn", "kxcdn"],
+      "header_tokens": ["x-forwarded-for", "x-cache"],
+      "issuer_tokens": ["stackpath"],
+      "org_tokens": ["stackpath", "highwinds"],
+      "range_urls": [
+        "https://support.stackpath.com/hc/en-us/articles/360001091666-IP-Blocks",
+        "https://misp.github.io/misp-warninglists/stackpath/list.json"
+      ],
+      "asns": [33438, 20446]
+    },
+    "bunnycdn": {
+      "name": "BunnyCDN",
+      "cname_tokens": ["bunnycdn", "b-cdn", "bunny.net"],
+      "header_tokens": [],
+      "issuer_tokens": ["bunny"],
+      "org_tokens": ["bunnycdn", "bunny.net"],
+      "range_urls": [
+        "https://bunnycdn.com/api/system/edgeserverlist",
+        "https://bunnycdn.com/api/system/edgeserverlist/IPv6"
+      ],
+      "asns": []
+    },
+    "keycdn": {
+      "name": "KeyCDN",
+      "cname_tokens": ["kxcdn.com", "kxcdn"],
+      "header_tokens": [],
+      "issuer_tokens": ["keycdn"],
+      "org_tokens": ["keycdn"],
+      "range_urls": [],
+      "asns": []
+    },
+    "cdn77": {
+      "name": "CDN77",
+      "cname_tokens": ["cdn77"],
+      "header_tokens": [],
+      "issuer_tokens": ["cdn77"],
+      "org_tokens": ["cdn77"],
+      "range_urls": [],
+      "asns": [60068]
+    },
+    "cachefly": {
+      "name": "CacheFly",
+      "cname_tokens": ["cachefly"],
+      "header_tokens": [],
+      "issuer_tokens": ["cachefly"],
+      "org_tokens": ["cachefly"],
+      "range_urls": [],
+      "asns": []
+    },
+    "limelight": {
+      "name": "Limelight Networks",
+      "cname_tokens": ["llnw", "limelight"],
+      "header_tokens": [],
+      "issuer_tokens": ["limelight"],
+      "org_tokens": ["limelight"],
+      "range_urls": [],
+      "asns": [22822]
+    },
+    "edgecast": {
+      "name": "EdgeCast / Verizon",
+      "cname_tokens": ["edgecast", "verizon", "edgekey"],
+      "header_tokens": [],
+      "issuer_tokens": ["verizon", "edgecast"],
+      "org_tokens": ["edgecast", "verizon"],
+      "range_urls": [],
+      "asns": [15133, 14153]
+    },
+    "cdnetworks": {
+      "name": "CDNetworks",
+      "cname_tokens": ["cdnetworks"],
+      "header_tokens": [],
+      "issuer_tokens": ["cdnetworks"],
+      "org_tokens": ["cdnetworks"],
+      "range_urls": [],
+      "asns": [36408, 38107]
+    },
+    "gcore": {
+      "name": "G-Core Labs",
+      "cname_tokens": ["gcore", "g-core"],
+      "header_tokens": [],
+      "issuer_tokens": ["g-core", "gcore"],
+      "org_tokens": ["g-core", "gcore"],
+      "range_urls": [],
+      "asns": [199524, 202422]
+    },
+    "sucuri": {
+      "name": "Sucuri (WAF)",
+      "cname_tokens": ["sucuri"],
+      "header_tokens": [],
+      "issuer_tokens": ["sucuri"],
+      "org_tokens": ["sucuri"],
+      "range_urls": [],
+      "asns": []
+    },
+    "vercel": {
+      "name": "Vercel / Now",
+      "cname_tokens": ["vercel.app", "now.sh", "vercel"],
+      "header_tokens": [],
+      "issuer_tokens": ["vercel"],
+      "org_tokens": ["vercel"],
+      "range_urls": [],
+      "asns": []
+    },
+    "netlify": {
+      "name": "Netlify",
+      "cname_tokens": ["netlify.app", "netlify"],
+      "header_tokens": [],
+      "issuer_tokens": ["netlify"],
+      "org_tokens": ["netlify"],
+      "range_urls": [],
+      "asns": []
+    },
+    "github_pages": {
+      "name": "GitHub Pages",
+      "cname_tokens": ["github.io", "githubusercontent.com"],
+      "header_tokens": [],
+      "issuer_tokens": ["github"],
+      "org_tokens": ["github"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "alibaba": {
+      "name": "Alibaba Cloud CDN",
+      "cname_tokens": ["alicdn", "alicdn.com", "aliyun"],
+      "header_tokens": ["x-ali-requestid"],
+      "issuer_tokens": ["aliyun", "alibaba"],
+      "org_tokens": ["alibaba", "aliyun"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "tencent": {
+      "name": "Tencent Cloud CDN",
+      "cname_tokens": ["cdn.dnsv1.com", "tencentcdn", "qcloudcdn"],
+      "header_tokens": [],
+      "issuer_tokens": ["tencent"],
+      "org_tokens": ["tencent", "tencent cloud"],
+      "range_urls": [],
+      "asns": [133478]
+    },
+
+    "huawei": {
+      "name": "Huawei Cloud CDN",
+      "cname_tokens": ["hwcdn", "huaweicloud"],
+      "header_tokens": [],
+      "issuer_tokens": ["huawei"],
+      "org_tokens": ["huawei"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "ovh": {
+      "name": "OVH / OVHcloud CDN",
+      "cname_tokens": ["ovh.net", "cdn.ovh.net"],
+      "header_tokens": [],
+      "issuer_tokens": ["ovh"],
+      "org_tokens": ["ovh"],
+      "range_urls": [],
+      "asns": [16276]
+    },
+
+    "hetzner": {
+      "name": "Hetzner CDN / Cache (Hetzner Online)",
+      "cname_tokens": ["hetzner", "cdn.hetzner"],
+      "header_tokens": [],
+      "issuer_tokens": ["hetzner"],
+      "org_tokens": ["hetzner"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "arvancloud": {
+      "name": "ArvanCloud",
+      "cname_tokens": ["arvancloud", "arvancdn"],
+      "header_tokens": [],
+      "issuer_tokens": ["arvan"],
+      "org_tokens": ["arvancloud"],
+      "range_urls": [
+        "https://arvancloud.ir/en/dev/ips"
+      ],
+      "asns": [208006]
+    },
+
+    "chinacache": {
+      "name": "ChinaCache / ChinaNetCenter (Quantil)",
+      "cname_tokens": ["ccgslb", "chinacache", "cdn.chinacache.net"],
+      "header_tokens": [],
+      "issuer_tokens": ["chinacache", "china"],
+      "org_tokens": ["chinacache", "chinanet"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "medianova": {
+      "name": "Medianova",
+      "cname_tokens": ["medianova"],
+      "header_tokens": [],
+      "issuer_tokens": ["medianova"],
+      "org_tokens": ["medianova"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "leaseweb": {
+      "name": "Leaseweb Multi-CDN / CDN",
+      "cname_tokens": ["leaseweb"],
+      "header_tokens": [],
+      "issuer_tokens": ["leaseweb"],
+      "org_tokens": ["leaseweb"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "lumen": {
+      "name": "Lumen (formerly CenturyLink / Level 3)",
+      "cname_tokens": ["lumen", "level3"],
+      "header_tokens": [],
+      "issuer_tokens": ["lumen", "level3"],
+      "org_tokens": ["lumen", "centurylink", "level3"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "tata": {
+      "name": "Tata Communications CDN",
+      "cname_tokens": ["tatacommunications", "tatacdn"],
+      "header_tokens": [],
+      "issuer_tokens": ["tata"],
+      "org_tokens": ["tata"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "cdn_sun": {
+      "name": "CDNsun",
+      "cname_tokens": ["cdnsun"],
+      "header_tokens": [],
+      "issuer_tokens": ["cdnsun"],
+      "org_tokens": ["cdnsun"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "wasabi": {
+      "name": "Wasabi (object storage, CDN via partners)",
+      "cname_tokens": ["wasabisys", "wasabi"],
+      "header_tokens": [],
+      "issuer_tokens": ["wasabi"],
+      "org_tokens": ["wasabi"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "digitalocean": {
+      "name": "DigitalOcean Spaces / CDN",
+      "cname_tokens": ["digitaloceanspaces", "cdn.digitaloceanspaces.com", "digitaloceanspaces"],
+      "header_tokens": [],
+      "issuer_tokens": ["digitalocean"],
+      "org_tokens": ["digitalocean"],
+      "range_urls": [],
+      "asns": []
+    },
+
+    "backblaze": {
+      "name": "Backblaze B2 + CDN partners",
+      "cname_tokens": ["backblaze"],
+      "header_tokens": [],
+      "issuer_tokens": ["backblaze"],
+      "org_tokens": ["backblaze"],
+      "range_urls": [],
+      "asns": []
+    }
+  }
+}
