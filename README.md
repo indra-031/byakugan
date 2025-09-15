@@ -132,12 +132,3 @@ This repository is provided under the MIT License. See `LICENSE` for details.
 This tool is designed for network analysis, auditing, research and education. Do not use it to perform unauthorized scanning or attack infrastructure. Act like a responsible shinobi: observe, report, and respect boundaries.
 
 ---
-
-If you want, I can now:
-
-* generate a sample `CDN-DB.json` with a few popular providers,
-* produce a `LICENSE` (MIT),
-* make a polished `requirements.txt`, or
-* create a GitHub-ready repo layout with GH Actions for linting and tests.
-
-Which one should I craft next, little shadow? 🥷
