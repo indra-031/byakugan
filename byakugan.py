@@ -558,6 +558,7 @@ def analyze_target(
 def main():
     parser = argparse.ArgumentParser(description="Byakugan — CDN detection & CIDR checker (improved)")
     parser.add_argument("target", nargs="?", help="domain, IP, or CIDR to analyze")
+    parser.add_argument("-f", "--file", help="path to file containing targets (one per line)")  
     parser.add_argument("--db", help="path to cdn_db.json", default=DEFAULT_DB)
     parser.add_argument("--update", action="store_true", help="fetch latest CDN ranges and update cache")
     parser.add_argument("--no-cache", action="store_true", help="do not use cache (force fetch)")
@@ -598,12 +599,23 @@ def main():
         warn("Interrupted by user", args.quiet)
         sys.exit(1)
 
-    if not args.target:
+
+    targets = []
+    if args.file:
+        if not os.path.exists(args.file):
+            err(f"File not found: {args.file}", args.quiet)
+            sys.exit(2)
+        with open(args.file, "r", encoding="utf-8") as f:
+            targets = [line.strip() for line in f if line.strip()]
+    elif args.target:
+        targets = [args.target]
+    else:
         parser.print_help()
         return
 
     out_json = (args.format == "json")
-    analyze_target(args.target, cdn_db, ranges, output_json=out_json, quiet=args.quiet)
+    for t in targets:
+        analyze_target(t, cdn_db, ranges, output_json=out_json, quiet=args.quiet)
 
 
 if __name__ == "__main__":
